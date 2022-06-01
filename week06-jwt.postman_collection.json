@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "224e5121-3988-4c7e-80d4-37d7f94fe1bf",
+		"name": "week06-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8193408"
+	},
+	"item": [
+		{
+			"name": "註冊新帳號",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"aa@aa.cc\",\r\n    \"password\":\"qwer1234\",\r\n    \"confirmPassword\":\"qwer1234\",\r\n    \"name\":\"aaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/sign_up",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\":\"aa@aa.cc\",\r\n    \"password\":\"qwer1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/sign_in",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更改密碼",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTc0ODliZjY5OTE5OWFhN2UxYjc5YyIsImlhdCI6MTY1NDA4MTkzNCwiZXhwIjoxNjU0Njg2NzM0fQ.JunLYM9w7BQTTkb-pBHSZ7G22ynN3fSSQ_6HDi29B10",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"password\":\"qwer1235\",\r\n    \"confirmPassword\":\"qwer1235\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/update_password",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"update_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新個人資料",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"我改名了 22\",\r\n    \"sex\":\"female\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/profile",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得個人資料",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/profile",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增一則貼文",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"今天請假了!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/post",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改一則貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"修改一則 11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/post/:id",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"post",
+						":id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62973262d76ca70a03421dd3",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62974d2af699199aa7e1b7ca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTcwOGM2NGRmODQzMzNhYjVkNTUzMiIsImlhdCI6MTY1NDA2NjE0NSwiZXhwIjoxNjU0NjcwOTQ1fQ.b_wH7NXyX7V9QBevov3vDGi_pSJTcp8FWupycanbxN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sleepy-retreat-46227.herokuapp.com/api/post/:id",
+					"protocol": "https",
+					"host": [
+						"sleepy-retreat-46227",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"post",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62974d2af699199aa7e1b7ca"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
